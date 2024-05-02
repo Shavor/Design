@@ -1,0 +1,137 @@
+.about {
+    padding-bottom: 160px;
+
+    &__inner {
+        display: flex;
+        gap: 94px;
+    }
+}
+
+.about__subtilte {
+        padding-bottom: 60px;
+}
+
+.inner {
+
+    &__right {
+        position: relative;
+
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        justify-content: flex-end;
+
+        margin-bottom: 39px;
+    }
+
+    &__right-person {
+        display: flex;
+        align-items: center;
+        max-width: 276px;
+        height: 90px;
+        gap: 20px;
+
+        position: absolute;
+        left: -154px;
+        top: 7%;
+
+        padding: 0 15px;
+
+        background-color: #fff;
+    }
+
+    &__right-text {
+        line-height: 28px;
+        padding-bottom: 40px;
+    }
+}
+
+.person-icon {
+    width: 51px;
+    height: 56px;
+}
+
+.person-name {
+    font-weight: 600;
+    line-height: 25.2px;
+    color: $black;
+}
+
+@media (max-width:1250px) {
+    .inner {
+        padding-bottom: 0;
+
+        &__left-img {
+            max-width: 100%;
+            display: block;
+            margin: 0 auto;
+        }
+
+        &__right-text {
+            padding-top: 110px;
+            margin: 0 auto;
+            display: block;
+            max-width: 81%;
+        }
+
+        &__right-person {
+            left: 0;
+        }
+    }
+
+    .about {
+        padding-bottom: 0;
+    }
+
+    .about__inner {
+        flex-wrap: wrap;
+        align-items: center;
+        flex-direction: column;
+        gap: 0;
+    }
+
+}
+
+@media (max-width:845px) {
+
+    .about__subtilte {
+        line-height: 43.2px;
+    }
+}
+
+@media (max-width:769px) {
+
+    .inner__right {
+        margin-bottom: 0;
+    }
+}
+
+@media (max-width:737px) {
+
+    .about__subtilte {
+        line-height: 48.2px;
+    }
+
+    .inner__right-person {
+        display: none;
+    }
+}
+
+@media (max-width:569px) {
+
+    .text::after {
+        width: 462px;
+    }
+}
+
+@media (max-width:321px) {
+
+    .subtitle.about__subtilte {
+        font-size: 1.6rem;
+        line-height: 42.2px;
+    }
+
+    .text.about__text::after{
+        width: 219px;
+    }
+}

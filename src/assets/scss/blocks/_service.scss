@@ -1,0 +1,156 @@
+.service {
+    position: relative;
+    margin-bottom: 248px;
+
+    &__wrapper {
+        position: relative;
+        padding-bottom: 160px;
+    }
+
+    &__inner {
+        display: block;
+        max-width: 883px;
+        background-color: #fff;
+        padding-right: 30px;
+    }
+
+    &__subtitle {
+        padding-bottom: 20px;
+    }
+
+    &__inner-text {
+        max-width: 471px;
+        line-height: 28.8px;
+
+        padding-bottom: 44px;
+    }
+
+    &__list {
+        counter-reset: num;
+        position: relative;
+    }
+
+    &__item {
+        font-size: 1.3rem;
+        font-weight: 600;
+        line-height: 33.6px;
+        color: $darcgray;
+        padding: 0 0 35px 51px;
+    }
+
+    &__item::before {
+        content:'0' counter(num);
+        counter-increment: num;
+        position: absolute;
+        display: inline-block;
+        width: 37px;
+        height: 34px;
+        color: $darcgray;
+        left: 4px;
+    }
+
+    &__item-link {
+        position: absolute;
+        right: 0;
+    }
+
+    &__item img {
+        display: block;
+        width: 32px;
+        height: 32px;
+
+        position: absolute;
+        right: 0;
+
+        cursor: pointer;
+    }
+    
+    &__img {
+        position: absolute;
+        top: 50%;
+        z-index: -1;
+        right: 0;
+    }
+}
+
+.text.service-text::after {
+    left: 75px;
+}
+
+@media (max-width:845px) {
+    .service__inner {
+        max-width: 674px;
+    }
+}
+
+@media (max-width:769px) {
+    .service__list {
+        max-width: 85%;
+    }
+}
+
+@media (max-width:737px) {
+
+    .service__inner {
+        max-width: 582px;
+    }
+}
+
+@media (max-width:569px) {
+
+    .service {
+
+        padding-bottom: 0;
+
+        &__img img{
+            width: 100%;
+        }
+
+        &__inner {
+            padding-right: 0;
+        }
+
+        &__item {
+            padding: 0 0 12px 51px;
+        }
+    }
+}
+
+@media (max-width:415px) {
+    .service {
+        margin-bottom: 0;
+
+        &__img {
+            top: 70%;
+        }
+    }
+}
+
+@media (max-width:321px) {
+    
+    .service {
+        &__img {
+            display: none;
+        }
+        &__wrapper {
+            padding-bottom: 0;
+        }
+
+        &__list {
+            max-width: 100%;
+        }
+
+        &__item {
+            font-size: 1.2rem;
+        }
+
+        &__item:nth-child(3)img{
+            top: -31px;
+        }
+    }
+
+    .text.service-text::after {
+        width: 209px;
+    }
+}
+

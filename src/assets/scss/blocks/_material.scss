@@ -1,0 +1,148 @@
+.material {
+    &__inner {
+        display: flex;
+        gap: 80px;
+    }
+
+    &__inner-text {
+        padding-bottom: 23px;
+    }
+
+    &__left {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas:
+        'material-1 material-2'
+        'material-1 material-3';
+        gap: 40px;
+    }
+
+    &__link {
+        padding: 14px 32px;
+        border: 1px solid #3C3C3C;
+        color: $darcgray;
+
+        display: inline-block;
+        transition: background-color .2s linear;
+    }
+
+    &__link:hover {
+        background-color: darken(#fff, 20%);
+        border: 1px solid white;
+
+    }
+
+}
+
+.material-1 {
+    grid-area: material-1;
+}
+
+.material-2 {
+    grid-area: material-2;
+    transform: translateY(-109px);
+}
+
+.material-3 {
+    grid-area: material-3;
+    transform: translateY(-109px);
+}
+
+.text.material-text::after {
+    left: 89px;
+}
+
+@media (max-width:844px) {
+
+    .material__inner {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .inner {
+        padding-bottom: 0;
+    }
+
+    .inner__right {
+        padding-bottom: 0;
+        margin-bottom: 0;
+    }
+
+    .inner__right-person {
+        left: 0;
+    }
+}
+
+@media (max-width:769px) {
+
+    .material {
+        &__inner {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    }
+}
+
+@media (max-width:668px) {
+
+    .subtitle {
+        line-height: 47.2px;
+    }
+}
+
+@media (max-width:569px) {
+    .text::after {
+        width: 429px;
+    }
+
+    .material-1,
+    .material-2,
+    .material-3 {
+        width: 100%;
+    }
+}
+
+@media (max-width:376px) {
+    .material__right {
+        padding-bottom: 46px;
+    }
+}
+
+@media (max-width:321px) {
+
+    .text.material-text::after{
+        width: 193px;
+    }
+
+    .subtitle {
+        font-size: 1.8rem;
+        line-height: 41.2px;
+    }
+
+    .material {
+
+        &__left {
+            display: flex;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
+        &__inner {
+            gap: 33px;
+        }
+
+        &__link {
+            padding: 10px 17px;
+            font-size: 16px;
+        }
+    }
+
+    .material-1 {
+        padding-bottom: 102px;
+    }
+    
+    .material-2 {
+        padding-bottom: 0;
+    }
+}
+
