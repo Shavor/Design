@@ -21,7 +21,15 @@ const browserSync = require("browser-sync").create();
 const srcPath = "src/";
 const distPath = "dist/";
 
-var ghPages = require("gulp-gh-pages");
+const ghPages = require("gh-pages");
+// const path = require("path");
+
+function deploy(cb) {
+  ghPages.publish(path.join(process.cwd(), "./build"), cb);
+}
+exports.deploy = deploy;
+
+// var ghPages = require("gulp-gh-pages");
 
 gulp.task("deploy", function () {
   return gulp.src("./dist/**/*").pipe(ghPages());
